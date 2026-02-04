@@ -10,7 +10,7 @@ public class CountingSort {
         this.array = array;
     }
 
-    public void doCountingSort(){
+    public int[] doCountingSort(){
 
         int max = 0;
 
@@ -42,8 +42,25 @@ public class CountingSort {
             countingSort[value]--;
         }
 
+        return sortedArray;
+    }
+
+    public void showCountingSort(int[] sortedArray){
+
         for (int i : sortedArray){
             System.out.print(i+" ");
         }
     }
+
+    public  int[] reverseArray(){
+        int[] array = doCountingSort();
+        int[] reverseArray = new int[array.length];
+
+        for(int i=0;i<array.length;i++){
+            reverseArray[i] = array[array.length-i-1];
+        }
+
+        return reverseArray;
+    }
+
 }
