@@ -94,6 +94,67 @@ public class Main {
 
          */
 
+        /* 백준 - 10815번 : 숫자 카드
+         */
+
+        /*
+        HashSet<Integer> set = new HashSet<>();
+        List<Integer> list = new ArrayList<>();
+
+        int n = Integer.parseInt(br.readLine());
+        StringTokenizer st = new StringTokenizer(br.readLine());
+
+        for (int i = 0; i < n; i++) {
+            set.add(Integer.parseInt(st.nextToken()));
+        }
+
+        int n2 = Integer.parseInt(br.readLine());
+        StringTokenizer st2 = new StringTokenizer(br.readLine());
+        for(int i=0;i<n2;i++){
+            list.add(Integer.parseInt(st2.nextToken()));
+        }
+
+        for(int x:list){
+            sb.append(set.contains(x) ? 1 : 0).append(" ");
+        }
+
+        System.out.print(sb);
+        
+         */
+
+        /* 백준 - 1026번 : 보물
+         */
+
+        int n = Integer.parseInt(br.readLine());
+        int[] array = new int[n];
+        int[] array2 = new int[n];
+        int total=0;
+
+        CountingSort countingSort = new CountingSort(n,array2);
+
+        // 첫 번째 배열 입력받기
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        for(int i=0;i<n;i++){
+            array[i] = Integer.parseInt(st.nextToken());
+        }
+
+        // 두 번째 배열 입력받기
+        StringTokenizer st2 = new StringTokenizer(br.readLine());
+        for(int i=0;i<n;i++){
+            array2[i] = Integer.parseInt(st2.nextToken());
+        }
+
+        // 첫 번째 배열 : 오름차순 , 두 번째 배열 : 내림차순
+        Arrays.sort(array);
+        int[] array2Sorted = countingSort.reverseArray();
+
+
+        // 최소합 구하기
+        for(int i=0;i<n;i++){
+            total = total + array[i]*array2Sorted[i];
+        }
+
+        System.out.print(total);
 
     }
 }
