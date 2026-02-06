@@ -22,6 +22,27 @@ public class Main {
 
          */
 
+        /* 병합 정렬 예시
+         */
+
+        /*
+        int[] arr = {
+                42, 17, 8, 99, 23,
+                5, 77, 61, 14, 3,
+                88, 34, 55, 1, 90,
+                2, 76, 19, 100, 50
+        };
+
+        MergeSort.mergeSort(arr);
+
+        for (int j : arr) {
+                sb.append(j).append(" ");
+        }
+
+        System.out.print(sb);
+
+         */
+
 
         // 2026-01-31
         /* 백준 - 1920번 : 수 찾기
@@ -125,6 +146,7 @@ public class Main {
         /* 백준 - 1026번 : 보물
          */
 
+        /*
         int n = Integer.parseInt(br.readLine());
         int[] array = new int[n];
         int[] array2 = new int[n];
@@ -155,6 +177,8 @@ public class Main {
         }
 
         System.out.print(total);
+         */
+
 
     }
 }
