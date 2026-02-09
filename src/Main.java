@@ -180,5 +180,76 @@ public class Main {
          */
 
 
+        /* 백준 - 1181번 : 단어 정렬
+         */
+
+        /*
+        Set<String> inputString = new HashSet<>();
+
+        int input = Integer.parseInt(br.readLine());
+        for(int i=0;i<input;i++){
+            inputString.add(br.readLine());
+        }
+
+        List<String> list = new ArrayList<>(inputString);
+        list.sort( (a,b)->{
+            if(a.length() == b.length()){
+                return a.compareTo(b);
+            } return a.length() - b.length();
+                });
+
+        for(String s : list){
+            sb.append(s).append("\n");
+        }
+
+        System.out.print(sb);
+         */
+
+
+        /* 백준 - 11650번 : 좌표 정렬하기
+         */
+
+        /*
+        int input = Integer.parseInt(br.readLine());
+        List<Point> points = new ArrayList<>();
+
+        for(int i=0;i<input;i++){
+            StringTokenizer st = new StringTokenizer(br.readLine());
+            int x = Integer.parseInt(st.nextToken());
+            int y = Integer.parseInt(st.nextToken());
+            points.add(new Point(x,y));
+        }
+
+        Collections.sort(points);
+
+        for(int i=0;i<input;i++){
+
+            sb
+                    .append(points
+                            .get(i).x)
+                    .append(" ")
+                    .append(points
+                            .get(i).y)
+                    .append("\n");
+        }
+
+        System.out.print(sb);
+
+    }
+
+    static class Point implements Comparable<Point> {
+        // Collections.sort(point)를 사용하면 내부의 CompareTo() 메소드를 채택하여 사용한다.
+        int x, y;
+        public Point(int x, int y) { this.x = x; this.y = y; }
+
+        @Override
+        public int compareTo(Point o) {
+            if(this.x != o.x) return this.x - o.x;
+            return this.y - o.y;
+        }
+
+         */
+
+
     }
 }
