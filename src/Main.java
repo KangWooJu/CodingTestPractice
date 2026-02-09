@@ -235,21 +235,116 @@ public class Main {
 
         System.out.print(sb);
 
-    }
+         */
 
-    static class Point implements Comparable<Point> {
-        // Collections.sort(point)를 사용하면 내부의 CompareTo() 메소드를 채택하여 사용한다.
-        int x, y;
-        public Point(int x, int y) { this.x = x; this.y = y; }
 
-        @Override
-        public int compareTo(Point o) {
-            if(this.x != o.x) return this.x - o.x;
-            return this.y - o.y;
+        /* 백준 - 11651번 : 좌표 정렬하기2
+         */
+
+        /*
+        int number = Integer.parseInt(br.readLine());
+        List<Point> points = new ArrayList<>();
+        for(int i=0;i<number;i++){
+            StringTokenizer st = new StringTokenizer(br.readLine());
+            int x = Integer.parseInt(st.nextToken());
+            int y = Integer.parseInt(st.nextToken());
+            points.add(new Point(x,y));
         }
+
+        Collections.sort(points);
+
+        for(int i=0;i<number;i++){
+
+            sb
+                    .append(points
+                            .get(i).x)
+                    .append(" ")
+                    .append(points
+                            .get(i).y)
+                    .append("\n");
+        }
+
+        System.out.print(sb);
 
          */
 
 
+
+        /* 백준 - 10867번 : 중복 빼고 정렬하기
+         */
+
+        /*
+        HashSet<Integer> set = new HashSet<>();
+
+        int number = Integer.parseInt(br.readLine());
+
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        while (st.hasMoreTokens()) {
+            set.add(Integer.parseInt(st.nextToken()));
+        }
+
+        set.stream()
+                .sorted()
+                .forEach(x -> sb.append(x).append(" "));
+
+        System.out.print(sb);
+
+         */
+
+
+        /* 백준 - 10816번 : 숫자 카드2
+         */
+
+        /*
+        HashMap<Integer,Integer> map = new HashMap<>();
+
+        int number = Integer.parseInt(br.readLine());
+
+        StringTokenizer st = new StringTokenizer(br.readLine());
+
+        while(st.hasMoreElements()){
+            int key = Integer.parseInt(st.nextToken());
+            map.put(key,map.getOrDefault(key,0)+1);
+        }
+
+        int number2 = Integer.parseInt(br.readLine());
+
+        StringTokenizer st2 = new StringTokenizer(br.readLine());
+
+        while(st2.hasMoreElements()){
+            sb
+                    .append(map.getOrDefault(Integer.parseInt(st2.nextToken()),0))
+                    .append(" ");
+        }
+
+        System.out.print(sb);
+
+         */
+
     }
+
+    /*
+    static class Point implements Comparable<Point> {
+        // Collections.sort(point)를 사용하면 내부의 CompareTo() 메소드를 채택하여 사용한다.
+
+        int x, y;
+
+        public Point(int x, int y) {
+            this.x = x;
+            this.y = y;
+        }
+
+        @Override
+        public int compareTo(Point o) {
+            /*if(this.x != o.x) return this.x - o.x;
+            return this.y - o.y;
+
+
+            if(this.y != o.y) return this.y- o.y;
+            return this.x - o.x;
+        }
+    }
+
+     */
+
 }
