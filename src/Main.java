@@ -11,50 +11,41 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
 
-        /* 백준 - 9012번 : 괄호
+        /* 백준 - 1874번 : 스택 수열
          */
 
-        int number = Integer.parseInt(br.readLine());
+        int count = Integer.parseInt(br.readLine());
 
-        for(int i=0;i<number;i++){
+        Stack<Integer> stack = new Stack<>();
+        int nextVal = 1;
+        boolean flag = true;
 
-            Stack<Character> stack = new Stack<>();
-            boolean flag = true;
+        for(int i = 0 ; i < count ; i ++ ){
+
+            int number = Integer.parseInt(br.readLine());
 
 
-            String s = br.readLine();
-            for(char c:s.toCharArray()){
-                switch (c) {
-                    case '(' : {
-                        stack.push('(');
-                        break;
-                    }
-
-                    case ')' : {
-                        // 스택이 비워져 있는 경우
-                        if(stack.isEmpty()){
-                            flag = false;
-                            break;
-                        } else {
-                            stack.pop();
-                            break;
-                        }
-                    }
-
+                while(nextVal <= number){
+                    stack.push(nextVal);
+                    nextVal++;
+                    sb.append("+").append("\n");
                 }
-            }
 
-            if(!stack.isEmpty()){
-                flag = false;
-            }
-
-            if(flag){
-                sb.append("YES").append("\n");
-            } else {
-                sb.append("NO").append("\n");
-            }
+                if(stack.peek()==number){
+                    stack.pop();
+                    sb.append("-").append("\n");
+                } else {
+                    flag = false;
+                    break;
+                }
         }
 
-        System.out.print(sb);
+        if(!flag){
+                System.out.print("NO");
+        }
+
+        if(flag){
+            System.out.print(sb);
+        }
     }
 }
