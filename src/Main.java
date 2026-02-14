@@ -11,41 +11,13 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
 
-        /* 백준 - 1874번 : 스택 수열
+        /* 백준 - 25083번 : 새싹
          */
-
-        int count = Integer.parseInt(br.readLine());
-
-        Stack<Integer> stack = new Stack<>();
-        int nextVal = 1;
-        boolean flag = true;
-
-        for(int i = 0 ; i < count ; i ++ ){
-
-            int number = Integer.parseInt(br.readLine());
-
-
-                while(nextVal <= number){
-                    stack.push(nextVal);
-                    nextVal++;
-                    sb.append("+").append("\n");
-                }
-
-                if(stack.peek()==number){
-                    stack.pop();
-                    sb.append("-").append("\n");
-                } else {
-                    flag = false;
-                    break;
-                }
-        }
-
-        if(!flag){
-                System.out.print("NO");
-        }
-
-        if(flag){
-            System.out.print(sb);
-        }
+        System.out.println("         ,r'\"7");
+        System.out.println("r`-_   ,'  ,/");
+        System.out.println(" \\. \". L_r'");
+        System.out.println("   `~\\/");
+        System.out.println("      |");
+        System.out.println("      |");
     }
 }
